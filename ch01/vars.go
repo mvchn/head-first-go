@@ -3,13 +3,9 @@ package main
 import "fmt"
 
 func main() {
-	var quantity int
-	var length, width float64
-	var customerName string
-
-	quantity = 4
-	length, width = 1.2, 2.4
-	customerName = "Test Test"
+	quantity := 4
+	length, width := 1.2, 2.4
+	customerName := "Test Test"
 
 	var myInt int
 	var myFloat float64
