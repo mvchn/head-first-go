@@ -2,13 +2,18 @@ package main
 
 import "fmt"
 
-func paintNeed(width float64, height float64) {
+func paintNeed(width float64, height float64) float64 {
 	area := width * height
-	fmt.Printf("%.2f liters needed\n", area/10.0)
+	return area / 10.0
 }
 
 func main() {
-	paintNeed(4.2, 3.0)
-	paintNeed(5.2, 3.5)
-	paintNeed(5.0, 3.3)
+	var amount, total float64
+	amount = paintNeed(4.2, 3.0)
+	fmt.Printf("%0.2f liters needed\n", amount)
+	total += amount
+	amount = paintNeed(5.2, 3.5)
+	fmt.Printf("%0.2f liters needed\n", amount)
+	total += amount
+	fmt.Printf("Total: %0.2f liters\n", total)
 }
